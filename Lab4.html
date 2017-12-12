@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Game of CLUE</title>
+</head>
+<body onload="init()"> <!--BGCOLOR="#999999"> -->
+	<script src="Lab4.js"></script>
+<!--
+	<img src="images/ColMustard.jpg" alt="Col Mustard"> 
+	<img src="images/MissScarlet.jpg" alt="Miss Scarlet">
+	<img src="images/MrGreen.jpg" alt="Mr. Green">
+	<img src="images/MrsPeacock.jpg" alt="Mrs. Peacock">
+	<img src="images/MrsWhite.jpg" alt="Mrs. White">
+	<img src="images/ProfPlum.jpg" alt="Professor Plum">
+	<img src="images/candlestick.jpg" alt="candlestick"> 
+	<img src="images/knife.jpg" alt="knife">
+	<img src="images/leadpipe.jpg" alt="leadpipe">
+	<img src="images/revolver.jpg" alt="revolver">
+	<img src="images/rope.jpg" alt="rope">
+	<img src="images/wrench.jpg" alt="wrench">
+-->
+
+	<p id="gamePieces"></p>
+	
+    <form >
+    	<p id="player">Please enter your name</p>
+          <input type="text" name="name" min="2" max="16" id="box" pattern="^(?!Guest$).*$" style="display:inline;" required>
+	      <input onclick="change()" type="button" name="login_status" id="button1" value="Log In">
+    </form>
+
+    <p id="playerHand"></p>
+    <p id="computerHand"></p>
+    <p id="all" style="display:inline"></p>
+    <p id="playAgain"></p>
+    <p id="guess" style="display:none"></p>
+    
+    <h3 id="directions" style="display:none">Please make your guess by selecting from menus below: </h3><br>
+    <table id="header" style="display:none"><tr><th width="100">Suspect</th>
+    	<th width="90">Weapon</th>
+    	<th width="90">Room</th></tr></table><br>
+
+    <form id="dropdown" style="display:none">
+  <select id="sChoice" name="suspects" style="display:inline">
+    
+  </select>
+  <select id="wChoice" name="weapons" style="display:inline">
+    
+  </select>
+  <select id="rChoice" name="rooms" style="display:inline">
+    
+  </select>
+  <br><br>
+  <input id = "guessButton" onclick="checkGuess()" type="button" value="Submit" style="display:inline">
+</form>
+<input id = "showHistory" onclick="showHistory()" type="button" value="Show History" style="display:none">
+<input id = "showRecord" onclick="showRecord()" type="button" value="Show Record" style="display:none"><br><br>
+    <p id="history" style="display:none"></p><br><br>
+    <h3 id="record" style="display:none">Computer's Win/Loss Record:</h3><br>
+    <p id="record1" style="display:none"></p><br>
+    <p id="wins" style="display:none"></p><br>
+    <p id="losses" style="display:none"></p><br>
+    <p id="date" style="display:none"></p>
+    <p id="test" style="display:inline"></p>
+    
+    
+</body>
+</html>
